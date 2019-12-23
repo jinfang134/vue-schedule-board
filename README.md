@@ -5,10 +5,11 @@ A easy-to-use component to show somebody's schedule list to help interview arran
 
 [中文](/doc/cn.md)
 
-![Example](./resources/sample.png)
+![Example](https://github.com/jinfang134/vue-schedule-board/blob/master/resources/sample.png?raw=true)
+
 
 To get started, check out:
-
+[demo](https://jinfang134.github.io/vue-schedule-board/)
 
 ## LICENSE
 
