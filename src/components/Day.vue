@@ -129,7 +129,7 @@ export default {
 };
 </script>
 
-<style  lang="scss" scoped>
+<style  lang="scss">
 $line-color: #ccc;
 
 .schedulerow {
