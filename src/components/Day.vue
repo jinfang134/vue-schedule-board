@@ -15,11 +15,12 @@
           <div class="timeline-list">
 
             <div v-for="(it,index) in getTimeSlotsMargins(person)" class="timeline" :key="'available'+index"
-              :style="{'margin-left':it.marginLeft+'%',width:it.width+'%' }">
+              v-on:click="handleClick(person)" :style="{'margin-left':it.marginLeft+'%',width:it.width+'%' }">
               {{it.label}}
             </div>
 
-            <div v-for="(it,index) in getAssignedSlotsMargin(person)" class="timeline assigned" :key="'assigned'+index"
+            <div v-for="(it,index) in getAssignedSlotsMargin(person)" class="timeline assigned"
+              v-on:click="handleClick(person)" @dblclick="handleDblClick(person)" :key="'assigned'+index"
               :style="{'margin-left':it.marginLeft+'%',width:it.width+'%','background-color':getColor(index) }">
               {{it.label}}
             </div>
@@ -52,6 +53,7 @@ export default {
   },
   data() {
     return {
+      timer: {},
       dateWidth: "80px"
     };
   },
@@ -107,11 +109,17 @@ export default {
       return list;
     },
 
-    handleClick(day, person) {
-      this.$emit("click", day, person);
+    handleClick(person) {
+      // console.log(this.day, person);
+      clearTimeout(this.timer);
+      let that = this;
+      this.timer = setTimeout(() => {
+        that.$emit("click", that.day, person);
+      }, 500);
     },
-    handDblClick(day, person) {
-      this.$emit("dblclick", day, person);
+    handleDblClick(person) {
+      clearTimeout(this.timer);
+      this.$emit("dblclick", this.day, person);
     }
   },
   mounted() {},
