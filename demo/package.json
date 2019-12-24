@@ -9,12 +9,11 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
-    "element-ui": "^2.13.0",
-    "sass-loader": "^8.0.0",
     "string-width": "^4.2.0",
     "vue": "^2.6.10"
   },
   "devDependencies": {
+    "sass-loader": "^8.0.0",
     "@vue/cli-plugin-babel": "^3.0.1",
     "@vue/cli-plugin-eslint": "^3.0.1",
     "@vue/cli-service": "^3.0.1",

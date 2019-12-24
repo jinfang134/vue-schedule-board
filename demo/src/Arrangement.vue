@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="page">
     <h2>Scheduler Board</h2>
     <p>
       <ol>
@@ -11,11 +11,12 @@
 
     <h2>Example1:</h2>
     <div class="myboard">
-      <scheduler-board :persons="sample1" ref="pipeline" @dblclick="handleDblClick" />
+      <scheduler-board :persons="sample1" ref="pipeline" @click="handleClick" @dblclick="handleDblClick" />
     </div>
     <h2>Example2:</h2>
     <div class="myboard">
-      <scheduler-board :persons="sample2" ref="pipeline" :startHour="10" @dblclick="handleDblClick" />
+      <scheduler-board :persons="sample2" ref="pipeline" @click="handleClick" :startHour="10"
+        @dblclick="handleDblClick" />
     </div>
   </div>
 </template>
@@ -40,10 +41,15 @@ export default {
   },
   watch: {},
   methods: {
+    handleClick(day, person) {
+      alert(`you clicked ${person.name}`);
+    },
     handleSelect(node) {
       this.msg = `{ ${node.name} }`;
     },
-    handleDblClick(day, person) {}
+    handleDblClick(day, person) {
+      alert(`you dbl clicked ${person.name}`);
+    }
   },
   mounted() {}
 };

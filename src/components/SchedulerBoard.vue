@@ -16,7 +16,8 @@
         </div>
       </div>
       <div class="schedules">
-        <day v-for="(it,index) in dayList" :key="index" :startHour="startHour" :persons="filterPersons(it)" :day='it' />
+        <day v-for="(it,index) in dayList" :key="index" :startHour="startHour" @click="handleClick"
+          @dblclick="handleDblClick" :persons="filterPersons(it)" :day='it' />
       </div>
       <div class="board__bottom"> </div>
     </div>
