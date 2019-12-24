@@ -3,3 +3,10 @@ test/
 demo/
 
 vue.config.js
+.editorconfig
+*.lock
+.eslint*
+babel.config.js
+index.js
+.vscode
+deploy-demo.sh
