@@ -10,6 +10,10 @@
     "components",
     "timeline"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jinfang134/vue-schedule-board"
+  },
   "main": "lib/vue-schedule-board.umd.min.js",
   "scripts": {
     "test": "ava test/*.test.js --verbose ",
