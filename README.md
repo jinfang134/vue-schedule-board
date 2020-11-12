@@ -26,18 +26,18 @@ To get started, check out:
 
 ## Install
 
-```
+```bash
 npm install vue-schedule-board
 ```
 
-```
+```js
 import Vue from 'vue'
 import ScheduleBoard from 'vue-schedule-board'
 
 Vue.use(ScheduleBoard)
 
 ```
-```
+```vue
   <scheduler-board :persons="sample2" ref="pipeline" :startHour="10" @dblclick="handleDblClick" />
 ```
 
@@ -52,7 +52,7 @@ Vue.use(ScheduleBoard)
 
 Person list example:
 
-```
+```json
 {
     "name": "Arwen",
     "timeSlots": [
@@ -104,7 +104,7 @@ If you find any bugs and/or want to contribute, feel free to create issues or su
 Thanks!
 
 ## Local Development
-```
+```bash
 cd demo
 yarn install
 
@@ -114,6 +114,6 @@ yarn run serve
 
 
 ### Lints and fixes files
-```
+```bash
 yarn run lint
 ```
